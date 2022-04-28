@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Num String</string>
+    <string name="convert_btn">Click</string>
+</resources>
