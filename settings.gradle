@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Num String"
 include ':app'
-include ':nativelib'

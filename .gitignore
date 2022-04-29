@@ -85,4 +85,4 @@ lint/tmp/
 # lint/reports/
 
 # native
-jniLibs/*
+app/src/main/jniLibs/*
