@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Numero -> parola</string>
+    <string name="convert_btn">Converti</string>
+    <string name="convert_lang">italian</string>
+</resources>

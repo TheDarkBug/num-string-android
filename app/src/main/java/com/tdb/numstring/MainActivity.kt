@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.lang.System.loadLibrary
 
 class MainActivity : AppCompatActivity() {
-    var numstringLang: String = "italian"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,6 +29,6 @@ class MainActivity : AppCompatActivity() {
     private external fun convert(input: String, lang: String): String
 
     fun convertOnClick(view: View) {
-        findViewById<TextView>(R.id.output).text = convert(findViewById<EditText>(R.id.userInput).text.toString(), readLangFile(numstringLang))
+        findViewById<TextView>(R.id.output).text = convert(findViewById<EditText>(R.id.userInput).text.toString(), readLangFile(getString(R.string.convert_lang)))
     }
 }
