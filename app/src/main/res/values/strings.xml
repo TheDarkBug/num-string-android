@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Num String</string>
     <string name="convert_btn">Convert</string>
+    <string name="clear_btn">Clear</string>
     <string name="convert_lang">english</string>
+    <string name="copy_button">Copy</string>
+    <string name="text_copied">Text copied to clipboard</string>
 </resources>
