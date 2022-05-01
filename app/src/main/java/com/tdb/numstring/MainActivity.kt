@@ -14,7 +14,6 @@ import java.lang.System.loadLibrary
 
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,10 +40,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun copyToClipboard() {
-        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clip: ClipData = ClipData.newPlainText("output", findViewById<TextView>(R.id.output).toString())
-        clipboard.setPrimaryClip(clip)
-        Toast.makeText(this, R.string.text_copied, Toast.LENGTH_LONG).show()
+//        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+//        val clip: ClipData = ClipData.newPlainText("simple text", "Hello, World!")
+//        clipboard.setPrimaryClip(clip)
+//        Toast.makeText(this, R.string.text_copied, Toast.LENGTH_LONG).show()
     }
 
     private external fun convert(input: String, lang: String): String
