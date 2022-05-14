@@ -86,3 +86,6 @@ lint/tmp/
 
 # native
 app/src/main/jniLibs/*
+
+# build
+app/release
