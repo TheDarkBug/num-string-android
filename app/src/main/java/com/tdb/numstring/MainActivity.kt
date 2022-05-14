@@ -1,15 +1,13 @@
 package com.tdb.numstring
 
-//import android.annotation.SuppressLint
-//import android.content.ClipData
-//import android.content.ClipboardManager
-//import android.content.Context
-//import android.widget.Toast
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.lang.System.loadLibrary
 
@@ -24,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.clear_button).setOnClickListener {
             clearOnClick()
         }
-//        findViewById<TextView>(R.id.output).setOnClickListener {
-//            copyToClipboard()
-//        }
+        findViewById<TextView>(R.id.output).setOnClickListener {
+            copyToClipboard()
+        }
         findViewById<TextView>(R.id.output).movementMethod = ScrollingMovementMethod()
         loadLibrary("num_string")
     }
@@ -49,12 +47,12 @@ class MainActivity : AppCompatActivity() {
         return application.assets.open(filename).bufferedReader().use{it.readText()}
     }
 
-//    private fun copyToClipboard() {
-//        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
-//        val clip: ClipData = ClipData.newPlainText("simple text", "Hello, World!")
-//        clipboard.setPrimaryClip(clip)
-//        Toast.makeText(this, R.string.text_copied, Toast.LENGTH_LONG).show()
-//    }
+    private fun copyToClipboard() {
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        val clip: ClipData = ClipData.newPlainText("simple text", findViewById<TextView>(R.id.output).text)
+        clipboard.setPrimaryClip(clip)
+        Toast.makeText(this, R.string.text_copied, Toast.LENGTH_LONG).show()
+    }
 
     private external fun convert(input: String, lang: String): String
 
